@@ -6,7 +6,7 @@ function AddButton({ addButtons }) {
 }
 
 function FavoriButton({ favoriButtons }) {
-    <Button variant="info" onClick={favoriButtons}>Favoriler</Button>
+    return <Button variant="info" onClick={favoriButtons}>Favoriler</Button>
 }
 
 function FavoriRemove({ favoriRemove }) {
