@@ -15,10 +15,10 @@ function Home({ products,removeProductBasket,addProduct,addFavori }) {
           <Card.Text className="text">{product.description}</Card.Text>
           <Card.Text className="text">{product.price}</Card.Text>
             
-        <div className="addRemove">
+        <div>
         <RemoveButton removeButtons={()=>removeProductBasket(product) }/>
         <AddButton addButtons={()=>addProduct(product)} />
-        <FavoriButton favroriButtons={()=>addFavori(product)}/>
+        <FavoriButton favoriButtons={()=>addFavori(product)}/>
         
         </div>
         </div>
