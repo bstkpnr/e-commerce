@@ -3,6 +3,7 @@ import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import SignIn from "./Pages/Auth/SignIn/SignIn";
 import SignUp from "./Pages/Auth/Signup/SignUp";
+import Products from "./Pages/Products/Products";
 export default function App() {
   return (
     <BrowserRouter>
@@ -12,7 +13,7 @@ export default function App() {
 
 
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Products} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
 
@@ -22,6 +23,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
-function Home() {
-  return <h2>Home</h2>;
-}
+
