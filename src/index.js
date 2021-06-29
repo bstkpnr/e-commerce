@@ -3,9 +3,18 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { ChakraProvider } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools'
+
 import "./reset.css";
 import "./index.css";
-const queryClient=new QueryClient();
+const queryClient=new QueryClient({
+  defaultOptions:{
+    queries:{
+      refetchOnMount:false,
+      refetchOnWindowFocus:false
+    }
+  }
+});
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +22,10 @@ ReactDOM.render(
       <ChakraProvider>
         <App />
       </ChakraProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
+
     </QueryClientProvider>
+
   </React.StrictMode>,
   document.getElementById("root")
 );
