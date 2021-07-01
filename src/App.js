@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import SignIn from "./Pages/Auth/SignIn/SignIn";
 import SignUp from "./Pages/Auth/Signup/SignUp";
 import Products from "./Pages/Products/Products";
+import ProductsDetail from "./Pages/Detail/ProductsDetail"
 export default function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ export default function App() {
 
         <Switch>
           <Route path="/" exact component={Products} />
+          <Route path="/products/:product_id" component={ProductsDetail}/>
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
 

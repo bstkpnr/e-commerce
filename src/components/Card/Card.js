@@ -6,7 +6,7 @@ import moment from "moment";
 export default function Card({item}) {
   return (
     <Box borderRadius="5px" borderWidth="1px" overflow="hidden" p="3">
-      <Link to="#/">
+      <Link to={`/products/${item._id}`}>
       
         <Image
           src={item.image}
